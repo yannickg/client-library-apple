@@ -50,7 +50,7 @@ class ConnectivityDaemon: Daemon, ConfigurationAccess, DatabaseAccess, Preferenc
     private init() {
         hasEnabledUpdates = false
 
-        guard let reachability = Reachability(hostname: "8.8.8.8") else {
+        guard let reachability = try? Reachability(hostname: "8.8.8.8") else {
             fatalError("Unable to create Reachability object")
         }
         self.reachability = reachability

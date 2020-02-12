@@ -22,6 +22,7 @@
 
 import UIKit
 import SwiftyBeaver
+import FacebookLogin
 
 private let log = SwiftyBeaver.self
 
@@ -34,7 +35,7 @@ class LoginViewController: AutolayoutViewController, WelcomeChild {
 
     @IBOutlet private weak var textPassword: BorderedTextField!
     
-    @IBOutlet private weak var buttonLogin: PIAButton!
+    @IBOutlet private weak var buttonLogin: FBLoginButton!
     
     var preset: Preset?
     
@@ -175,7 +176,7 @@ class LoginViewController: AutolayoutViewController, WelcomeChild {
     }
     
     private func styleLoginButton() {
-        buttonLogin.setRounded()
+        //buttonLogin.setRounded()
         buttonLogin.style(style: TextStyle.Buttons.piaGreenButton)
         buttonLogin.setTitle(L10n.Welcome.Login.submit.uppercased(),
                                for: [])

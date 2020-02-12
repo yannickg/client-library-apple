@@ -6,6 +6,9 @@ use_frameworks!
 inhibit_all_warnings!
 
 abstract_target 'PIALibrary' do
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
     pod 'SwiftyBeaver', '~> 1.7.0'
     pod 'Gloss', '~> 2'
     pod 'Alamofire', '~> 4'

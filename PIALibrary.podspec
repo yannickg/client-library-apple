@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.homepage          = "https://www.privateinternetaccess.com/"
     s.license           = { :type => "MIT", :file => "LICENSE" }
     s.author            = { "Jose Blaya" => "joseblaya@londontrustmedia.com", "Davide De Rosa" => "" }
-    s.source            = { :git => "https://github.com/pia-foss/client-library-apple.git", :tag => "v#{s.version}" }
+    s.source            = { :git => "https://github.com/yannickg/client-library-apple.git", :tag => "v#{s.version}" }
 
     s.ios.deployment_target = "11.0"
     #s.osx.deployment_target = "10.11"

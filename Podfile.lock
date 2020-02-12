@@ -1,16 +1,40 @@
 PODS:
-  - Alamofire (4.8.1)
-  - DynamicBlurView (3.0.1)
-  - Gloss (2.1.0)
-  - lottie-ios (3.0.3)
+  - Alamofire (4.9.1)
+  - DynamicBlurView (4.0.0)
+  - FacebookCore (0.9.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FacebookLogin (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKLoginKit (~> 5.0)
+  - FacebookShare (0.9.0):
+    - FacebookCore (~> 0.9.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKShareKit (~> 5.0)
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.15.1):
+    - FBSDKLoginKit/Login (= 5.15.1)
+  - FBSDKLoginKit/Login (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKShareKit (5.15.1):
+    - FBSDKShareKit/Share (= 5.15.1)
+  - FBSDKShareKit/Share (5.15.1):
+    - FBSDKCoreKit (~> 5.0)
+  - Gloss (2.1.1)
+  - lottie-ios (3.1.6)
   - OpenSSL-Apple (1.1.1d.5a)
-  - PopupDialog (0.9.2):
-    - DynamicBlurView (~> 3.0.1)
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
   - QuickLayout (2.0.2)
-  - ReachabilitySwift (4.3.0)
+  - ReachabilitySwift (5.0.0)
   - SwiftEntryKit (0.7.2):
     - QuickLayout (= 2.0.2)
-  - SwiftyBeaver (1.7.0)
+  - SwiftyBeaver (1.7.1)
   - TunnelKit (2.2.2):
     - TunnelKit/Protocols/OpenVPN (= 2.2.2)
   - TunnelKit/AppExtension (2.2.2):
@@ -25,6 +49,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4)
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - Gloss (~> 2)
   - lottie-ios
   - PopupDialog
@@ -34,9 +61,15 @@ DEPENDENCIES:
   - TunnelKit (from `https://github.com/pia-foss/tunnelkit`, commit `d19b9de`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - DynamicBlurView
+    - FacebookCore
+    - FacebookLogin
+    - FacebookShare
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
     - Gloss
     - lottie-ios
     - OpenSSL-Apple
@@ -57,18 +90,24 @@ CHECKOUT OPTIONS:
     :git: https://github.com/pia-foss/tunnelkit
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  DynamicBlurView: b1df5415f9bd31897549e5d7077e5ec120a4d636
-  Gloss: 13ab6b4b0ff4cb2448466edc957479b1bccea8ba
-  lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  DynamicBlurView: ccf9acd2b20c883cc2c72e3524a04d8d3ee20533
+  FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
+  FacebookShare: 85968ad1b1606c4944fb154924e425fd29184ea5
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
+  FBSDKShareKit: 259737eab3cc807087374553abdf588b3096ba55
+  Gloss: 9df15229b2f6484c14752a738474fd2528b4c5cd
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
   OpenSSL-Apple: 2c9efbc94e0a1ada434cc197b02bd70052a82281
-  PopupDialog: f4bb461bf70ff422be0b56656566424ee9273080
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   QuickLayout: a730730b646b231fd4ef7cffaeb1e81fe0e1ca92
-  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftEntryKit: 83d312243af7397e38a222b17b7a744b9a7d2145
-  SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
+  SwiftyBeaver: da5e573ad583586c18236324c36900990afe1733
   TunnelKit: 1733ed87934deb57edc7aa5f4b25185bf302a7d4
 
-PODFILE CHECKSUM: aab003f0cc1605940cc158f926b5148d27317625
+PODFILE CHECKSUM: e20ebaa2e64051053c404320b8160f51499413c8
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4
